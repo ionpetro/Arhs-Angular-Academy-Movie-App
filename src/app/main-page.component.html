@@ -1,4 +1,7 @@
-{{name}}
+<div *ngFor="let item of paramsList">
+    {{item}}
+</div>
+
 <h2>All movies</h2>
 <app-movies-list (movieSelected)="selectedMovieTitle = $event"></app-movies-list>
 <h2>Featured movies</h2>

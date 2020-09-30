@@ -9,16 +9,18 @@ import { ActivatedRoute } from '@angular/router';
 export class MainPageComponent implements OnInit {
 
   selectedMovieTitle: string = '';
-  name: string = '';
+  paramsList: Array<string> = [];
 
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
 
-      console.log(this.route);
-
       this.route.queryParams.subscribe(params => {
-        this.name = params['name'];
+        for (let param in params) {
+          let result = `${param} : ${params[param]}`
+          this.paramsList.push(result)
+        }
+
       });
     
   }
