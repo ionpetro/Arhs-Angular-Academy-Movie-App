@@ -1,8 +1,10 @@
-<input/>
-<button type="button">Search</button>
-<h1>All movies</h1>
-<app-movies-list (movieSelected)="selectedMovieTitle = $event"></app-movies-list>
-<h1>Featured movies</h1>
-<app-movies-list (movieSelected)="selectedMovieTitle = $event" [criteria]="{featured:true}"></app-movies-list>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/movies-list" routerLinkActive="active">Movies</a></li>
+    <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+  </ul>
+</nav>
 
-<app-movie-details [selectedMovieTitle]="selectedMovieTitle"></app-movie-details>
+<router-outlet></router-outlet>

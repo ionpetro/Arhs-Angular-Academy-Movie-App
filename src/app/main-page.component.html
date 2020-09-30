@@ -1,0 +1,7 @@
+{{name}}
+<h2>All movies</h2>
+<app-movies-list (movieSelected)="selectedMovieTitle = $event"></app-movies-list>
+<h2>Featured movies</h2>
+<app-movies-list (movieSelected)="selectedMovieTitle = $event" [criteria]="{featured:true}"></app-movies-list>
+
+<app-movie-details [selectedMovieTitle]="selectedMovieTitle"></app-movie-details>
