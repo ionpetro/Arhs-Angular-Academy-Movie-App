@@ -7,6 +7,7 @@ import { MoviesModule } from './movies/movies.module';
 import { AppRoutingModule } from './app-routing.module';
 import { MainPageComponent } from './main-page.component';
 import { AboutComponent } from './about/about.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,8 @@ import { AboutComponent } from './about/about.component';
     BrowserModule,
     MoviesModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

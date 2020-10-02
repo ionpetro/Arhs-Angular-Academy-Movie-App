@@ -1,1 +1,13 @@
 <p>about works!</p>
+
+<label>
+    Name: 
+    <input [formControl]="name">
+</label>
+<p>
+    <button (click)="updateName()">Update</button>
+</p>
+
+<p>
+    Value: {{name.value}}
+</p>
