@@ -8,21 +8,16 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class MainPageComponent implements OnInit {
 
-  selectedMovieTitle: string = '';
-  paramsList: Array<string> = [];
+  title:string = 'angular-academy';
+  access:string = 'NO';
 
-  constructor(private route: ActivatedRoute) { }
+  ngOnInit() {
+    sessionStorage.setItem('access', this.access);
+  }
 
-  ngOnInit(): void {
-
-      this.route.queryParams.subscribe(params => {
-        for (let param in params) {
-          let result = `${param} : ${params[param]}`
-          this.paramsList.push(result)
-        }
-
-      });
-    
+  setSessionStorage() {
+    this.access = 'YES';
+    sessionStorage.setItem('access', this.access);
   }
 
 }

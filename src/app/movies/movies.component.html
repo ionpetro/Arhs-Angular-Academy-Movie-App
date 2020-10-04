@@ -1,3 +1,12 @@
-<p class="red">movies works!</p>
+<div class="container" style="margin: 3em;">
+<div *ngFor="let item of paramsList">
+    {{item}}
+</div>
 
-{{ name }}
+<h2>All movies</h2>
+<app-movies-list (movieSelected)="selectedMovieTitle = $event"></app-movies-list>
+<h2>Featured movies</h2>
+<app-movies-list (movieSelected)="selectedMovieTitle = $event" [criteria]="{featured:true}"></app-movies-list>
+
+<app-movie-details [selectedMovieTitle]="selectedMovieTitle"></app-movie-details>
+</div>

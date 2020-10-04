@@ -8,12 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainPageComponent } from './main-page.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SignupComponent } from './signup/signup.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainPageComponent,
-    AboutComponent
+    AboutComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

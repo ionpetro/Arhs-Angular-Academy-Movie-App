@@ -1,10 +1,16 @@
-<div *ngFor="let item of paramsList">
-    {{item}}
+<div class="container">
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+
+Click <button (click)="setSessionStorage()">HERE</button> to get access on Movies List
+
+
+<nav>
+  <ul>
+    <li><a routerLink="signup">SignUp</a></li>
+    <li><a routerLink="movies-list" routerLinkActive="active">Movies</a></li>
+    <li><a routerLink="about" routerLinkActive="active">About</a></li>
+  </ul>
+</nav>
+
 </div>
-
-<h2>All movies</h2>
-<app-movies-list (movieSelected)="selectedMovieTitle = $event"></app-movies-list>
-<h2>Featured movies</h2>
-<app-movies-list (movieSelected)="selectedMovieTitle = $event" [criteria]="{featured:true}"></app-movies-list>
-
-<app-movie-details [selectedMovieTitle]="selectedMovieTitle"></app-movie-details>
