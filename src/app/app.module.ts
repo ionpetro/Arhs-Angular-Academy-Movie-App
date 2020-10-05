@@ -9,6 +9,7 @@ import { MainPageComponent } from './main-page.component';
 import { AboutComponent } from './about/about.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SignupComponent } from './signup/signup.component';
+import { MoviesComponent } from './movies/movies.component';
 
 @NgModule({
   declarations: [

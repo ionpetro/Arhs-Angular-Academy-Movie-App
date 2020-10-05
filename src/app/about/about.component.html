@@ -6,12 +6,12 @@
     <input [formControl]="name">
 </label>
 <p>
-    <button (click)="updateName()">Update</button>
+    <button class="btn btn-primary" (click)="updateName()">Update</button>
 </p>
 
 <p>
     Value: {{name.value}}
 </p>
-<a routerLink='/'><button>Back</button></a>
+<a routerLink='/'><button class="btn btn-secondary">Back</button></a>
 </div>
 </div>
