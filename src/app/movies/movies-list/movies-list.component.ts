@@ -19,21 +19,6 @@ export class MoviesListComponent implements OnInit {
   ) {}
   
   ngOnInit(): void {
-    let allMovies = this.db.getMovies();
-
-    if (this.criteria) {
-      if (this.criteria.featured) {
-        for (let movie of allMovies) {
-          if (movie.featured) {
-            this.movies.push(movie)
-          } 
-        }
-      }
-
-    } else {
-
-      this.movies = allMovies;
-
-    }
+      this.movies = this.db.getMovies(this.criteria);
   }
 }
