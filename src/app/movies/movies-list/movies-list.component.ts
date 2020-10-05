@@ -1,8 +1,6 @@
 import { Component, Input, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core';
 import { DbService } from 'src/app/services/db.service';
-import { movies } from '../data/movies';
-// import { Movie } from '../movie';
  
 @Component({
   selector: 'app-movies-list',
@@ -13,13 +11,6 @@ export class MoviesListComponent implements OnInit {
 
   @Output() movieSelected = new EventEmitter();
   @Input() criteria: any;
-
-  // movies: Movie[] = [
-  //   { title: 'Inception', dateReleased: '16-07-2010' },
-  //   { title: 'Lord of the Rings', dateReleased: '19-12-2001' },
-  //   { title: 'Avengers', dateReleased: '26-04-2019' },
-  //   { title: 'Batman', dateReleased: '18-07-2008' },
-  // ];
 
   movies = [];
   
